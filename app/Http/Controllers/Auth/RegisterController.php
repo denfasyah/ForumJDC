@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\Auth\Register;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Cache;
@@ -42,11 +43,16 @@ class RegisterController extends Controller
         ]);
 
         if($validate->fails()) return redirect()->route('register.index')->withErrors($validate);
-        return response()->json([
-            "status" => 201,
-            "data" => $request->all(),
-            "message" => "Register Berhasil"
-        ]);
+        $data = [
+            'fullname' => $request['FullName'],
+            'email' => $request['Email'],
+            'username' => $request['Username'],
+            'password' => bcrypt($request['Password'])
+        ];
+
+        User::create($data);
+
+        return redirect('auth/login')->with('success', 'Registration Successfull ! Let`s Login');
     }
 
     /**

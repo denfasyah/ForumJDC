@@ -76,10 +76,10 @@
                       <input placeholder="Email" class="pl-10 bg-white
                       text-black border-0 rounded-md p-2 w-full
                       focus:outline-none focus:ring-1 focus:ring-blue-500
-                      transition ease-in-out duration-150 @error("Email")
-                      is-invalid @enderror" type="email" name="Email" />
+                      transition ease-in-out duration-150 @error("email")
+                      is-invalid @enderror" type="text" name="email" />
                     </div>
-                    @error('Email')
+                    @error('email')
                     <div class="text-start text-sm">{{ $message }}</div>
                     @enderror
                   </div>
@@ -137,10 +137,10 @@
                     <input id="password" placeholder="Password" class="pl-10
                     bg-white text-black border-0 rounded-md p-2 w-full
                     focus:outline-none focus:ring-1 focus:ring-blue-500
-                    transition ease-in-out duration-150 @error("Password")
-                    is-invalid @enderror" type="password" name="Password" />
+                    transition ease-in-out duration-150 @error("password")
+                    is-invalid @enderror" type="password" name="password" />
                   </div>
-                  @error('Password')
+                  @error('password')
                   <div class="text-start text-sm">{{ $message }}</div>
                   @enderror
                 </div>
