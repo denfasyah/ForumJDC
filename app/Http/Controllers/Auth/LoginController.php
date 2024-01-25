@@ -32,7 +32,6 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        // Email,Password
         $validate = Validator::make($request->only(['email','password']), [
             'email' => 'required',
             'password' => 'required',
