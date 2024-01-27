@@ -35,6 +35,7 @@
             </li>
             <li>
               <a href="/popular" class="text-white">Popular</a>
+            
             </li>
           </ul>
         </div>
@@ -137,6 +138,7 @@
                     fill="none"
                     stroke="#050505"
                     stroke-linecap="round"
+               
                     stroke-linejoin="round"
                     stroke-width="2"
                     viewBox="0 0 24 24"
@@ -148,7 +150,6 @@
                   </svg>
                 </a>
               </div>
-
               <div
                 class="mt-1 group hover:bg-Blue hover:text-white p-2 rounded-lg"
               >

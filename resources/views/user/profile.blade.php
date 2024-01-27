@@ -366,6 +366,7 @@
         />
       </div>
       <!-- 
+
       <div class="w-full bg-white mt-7 pb-3 rounded-2xl">
         <div class="flex relative">
           <div class="avatar flex items-center ml-5 mt-5">

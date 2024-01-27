@@ -57,7 +57,7 @@
         <hr class="h-0.5 bg-slate-400" />
 
         <div class="flex flex-wrap">
-          <div class="avatarmt-5 flex items-center">
+          <div class="avatar mt-5 flex items-center">
             <div
               class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
             >
