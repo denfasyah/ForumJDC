@@ -26,6 +26,10 @@ Route::get('/user', function () {
 Route::get('/user/profile', function () {
     return view('user/profile');
 });
+Route::get('/popular', function () {
+    return view('user/popular');
+});
+
 Route::get('/user/bookmart', function () {
     return view('user/bookmart');
 });
