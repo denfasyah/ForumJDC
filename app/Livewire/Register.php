@@ -16,17 +16,17 @@ class Register extends Component
         'password' => 'required|min:8',
         'rpassword' => 'required|min:8|same:password',
     ];
-    public function updated($propertyName)
-    {
-        $this->validateOnly($propertyName);
-    }
+    // public function updated($propertyName)
+    // {
+    //     $this->validateOnly($propertyName);
+    // }
     public function register()
     {
+        $this->validate();
         $exceptValidate = Arr::except($this->validate(), 'rpassword');
         $exceptValidate['password'] = bcrypt($exceptValidate['password']);
 
         User::create($exceptValidate);
-        dd($exceptValidate);
     }
     public function render()
     {

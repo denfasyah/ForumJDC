@@ -105,7 +105,7 @@
         <div class="flex flex-col">
             <button
             class="bg-Aqua text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-cyan-500 transition ease-in-out duration-150"
-            type="submit" name="KeyCode" value="1">
+            type="submit">
             Register
         </button>
         @csrf

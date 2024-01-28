@@ -18,7 +18,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 // Main Routess
-Route::get('/', [MainController::class,'index']);
+Route::get('/', [MainController::class,'index'])->name('index');
 
 Route::get('/user', function () {
     return view('user/index');
