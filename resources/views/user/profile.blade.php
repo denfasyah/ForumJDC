@@ -361,12 +361,11 @@
 
       <div class="w-full rounded-2xl">
         <img
-          class="mx-auto mt-16 mb-2 w-96"
-          src="{{ asset('img/nodata.png') }}"
-        />
+              class="mx-auto mt-16 mb-2 w-96"
+              src="{{ asset('img/nodata.png') }}"
+            />
       </div>
-      <!-- 
-
+<!-- 
       <div class="w-full bg-white mt-7 pb-3 rounded-2xl">
         <div class="flex relative">
           <div class="avatar flex items-center ml-5 mt-5">
@@ -522,6 +521,8 @@
           </div>
         </div>
       </div> -->
+
+      
 
       <!-- pagination -->
       <!-- <div class="w-full bg-white mt-4 text-center rounded-2xl">

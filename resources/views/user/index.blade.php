@@ -17,7 +17,7 @@
         <div class="flex flex-wrap">
           <div class="avatarmt-5 flex items-center">
             <div
-              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-3"
             >
               <!-- <span>.</span> -->
               <img
@@ -32,7 +32,7 @@
             </p>
           </div>
           <button
-            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 bg-Blue text-white text-xs rounded-md lg:absolute px-1 font-bold lg:right-0 flex ml-16"
           >
             Join
           </button>
@@ -47,7 +47,7 @@
         <!-- Content for Friends section -->
       </div>
 
-      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+      <div class="bg-white p-5 rounded-2xl mt-3 relative">
         <h2
           class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
         >
@@ -55,26 +55,22 @@
           Community Event
         </h2>
         <hr class="h-0.5 bg-slate-400" />
-
-        <div class="flex flex-wrap">
-          <div class="avatar mt-5 flex items-center">
-            <div
-              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
-            >
-              <!-- <span>.</span> -->
+        <div class="flex">
+          <div class="avatar">
+            <div class="w-14 mt-5 rounded-full">
               <img
                 src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
               />
             </div>
-            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
-              Laravel
-              <span class="block text-xs text-slate-400"
+            <p class="mt-5 ml-5 text-lg font-semibold">
+              Harajuku Festival
+              <span class="block text-sm text-slate-400"
                 >453 Thread 1.2k Post</span
               >
             </p>
           </div>
           <button
-            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
           >
             See
           </button>
