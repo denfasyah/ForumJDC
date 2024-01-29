@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\SocialMedia;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,6 +21,19 @@ class DatabaseSeeder extends Seeder
             'username' => 'test',
             'email' => 'test@example.com',
             'password' => bcrypt('Kangyann57'),
+        ]);
+
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Tiktok',
+            'images' => '1.jpg'
+        ]);
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Instagram',
+            'images' => '1.jpg'
+        ]);
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Facebook',
+            'images' => '1.jpg'
         ]);
     }
 }
