@@ -1,12 +1,11 @@
 <?php
 
-use App\Models\SocialMedia;
-use App\Models\User;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ComponentController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,9 +21,7 @@ use App\Http\Controllers\Auth\RegisterController;
 // Main Routess
 Route::get('/', [MainController::class, 'index'])->name('index');
 
-Route::get('/user', function () {
-    return view('user/index');
-});
+Route::get('/user', [UserController::class, 'index'])->middleware('auth');
 Route::get('/user/profile', function () {
     return view('user/profile');
 });

@@ -21,19 +21,34 @@ class DatabaseSeeder extends Seeder
             'username' => 'test',
             'email' => 'test@example.com',
             'password' => bcrypt('Kangyann57'),
+            'country' => 'Indonesia',
+            'profile_images' => 'profile.png'
         ]);
 
         \App\Models\Platform::factory()->create([
-            'platform_name' => 'Tiktok',
-            'images' => '1.jpg'
-        ]);
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Instagram',
-            'images' => '1.jpg'
+            'platform_name' => 'Twitter',
+            'images' => 'twitter.png',
+            'link' => 'https://twitter.com/'
         ]);
         \App\Models\Platform::factory()->create([
             'platform_name' => 'Facebook',
-            'images' => '1.jpg'
+            'images' => 'facebook.png',
+            'link' => 'https://facebook.com/'
+        ]);
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Discord',
+            'images' => 'Discord.png',
+            'link' => 'https://discord.com/'
+        ]);
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Tiktok',
+            'images' => 'tiktok.png',
+            'link' => 'https://tiktok.com/'
+        ]);
+        \App\Models\Platform::factory()->create([
+            'platform_name' => 'Instagram',
+            'images' => 'instagram.png',
+            'link' => 'https://instagram.com/'
         ]);
     }
 }

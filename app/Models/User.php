@@ -3,10 +3,12 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Models\Platform;
+use App\Models\SocialMedia;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -22,6 +24,8 @@ class User extends Authenticatable
         'username',
         'email',
         'password',
+        'country',
+        'profile_images'
     ];
 
     /**
@@ -47,5 +51,4 @@ class User extends Authenticatable
     public function socialMedia() {
         return $this->hasMany(SocialMedia::class);
     }
-
 }

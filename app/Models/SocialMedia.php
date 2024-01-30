@@ -12,15 +12,14 @@ class SocialMedia extends Model
     use HasFactory;
 
     protected $fillable = [
-        'link',
         'username',
         'user_id',
         'platform_id'
     ];
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
+    // public function user()
+    // {
+    //     return $this->belongsTo(User::class);
+    // }
 
     public function platform()
     {
