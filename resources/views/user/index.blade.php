@@ -42,11 +42,66 @@
                 </p>
             </div>
 
+
+        <!-- Content for Friends section -->
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+        <h2
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+        >
+          <img src="{{ asset('icon/community.png') }}" />
+          My Community
+        </h2>
+        <hr class="h-0.5 bg-slate-400" />
+
+        <div class="flex flex-wrap">
+          <div class="avatarmt-5 flex items-center">
+            <div
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
+            >
+              <!-- <span>.</span> -->
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
+              Laravel
+              <span class="block text-xs text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
+          </div>
+          <button
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+          >
+            Join
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See All
+          </button>
+        </div>
+
+        <!-- Content for Friends section -->
+      </div>
+    </div>
+
+    <div class="w-1/2 bg-white lg:mx-4 h-14 rounded-2xl">
+      <div class="w-full bg-white pb-3 rounded-2xl">
+        <div class="flex relative">
+          <div class="avatar flex items-center ml-5 mt-5">
+            <div class="mask mask-circle w-7 lg:w-12 md:w-14 sm:w-8 mx-auto">
+              <img src="{{ asset('icon/anime.png') }}" />
+
             <div class="lg:mr-8 md:mr-8 sm:mr-5 mr-2">
                 <a href="#" class="text-xs lg:text-lg md:text-md sm:text-sm font-bold text-black">1.1K</a>
                 <p class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500">
                     Following
                 </p>
+
             </div>
 
             <div class="hidden lg:inline md:inline lg:mr-8 md:mr-8 sm:mr-2 mr-2">
@@ -376,6 +431,130 @@
             </div>
         </div>
 
+
+    <div class="lg:w-1/3 w-2/5 mt-4 lg:mt-0">
+      <div class="bg-white p-5 rounded-2xl relative">
+        <h2
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+        >
+          <img src="{{ asset('icon/community.png') }}" />
+          Marketplace
+        </h2>
+        <hr class="h-0.5 bg-slate-400" />
+
+        <div class="flex flex-wrap">
+          <div class="avatarmt-5 flex items-center">
+            <div
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
+            >
+              <!-- <span>.</span> -->
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
+              Laravel
+              <span class="block text-xs text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
+          </div>
+          <button
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+          >
+            Join
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See All
+          </button>
+        </div>
+
+        <!-- Content for Friends section -->
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+        <h2
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+        >
+          <img src="{{ asset('icon/community.png') }}" />
+          Top Creator
+        </h2>
+        <hr class="h-0.5 bg-slate-400" />
+
+        <div class="flex flex-wrap">
+          <div class="avatarmt-5 flex items-center">
+            <div
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
+            >
+              <!-- <span>.</span> -->
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
+              Laravel
+              <span class="block text-xs text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
+          </div>
+          <button
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+          >
+            Join
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See All
+          </button>
+        </div>
+
+        <!-- Content for Friends section -->
+      </div>
+
+      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+        <h2
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+        >
+          <img src="{{ asset('icon/topCom.png') }}" />
+          Top Community
+        </h2>
+        <hr class="h-0.5 bg-slate-400" />
+
+        <div class="flex flex-wrap">
+          <div class="avatarmt-5 flex items-center">
+            <div
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-5 mt-5"
+            >
+              <!-- <span>.</span> -->
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
+              Laravel
+              <span class="block text-xs text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
+          </div>
+          <button
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 md:mt-8 md:mr-5 bg-Blue text-white text-xs rounded-md lg:absolute md:absolute px-1 py-1 font-bold lg:right-0 md:right-0 flex ml-16 sm:ml-20"
+          >
+            Join
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See All
+          </button>
+
         <div class="lg:w-1/3 w-2/5 mt-4 lg:mt-0">
             <div class="bg-white p-5 rounded-2xl relative">
                 <h2 class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center">
@@ -421,6 +600,7 @@
                 </div>
                 <!-- Content for Videos section -->
             </div>
+
         </div>
     </div>
 </div>
