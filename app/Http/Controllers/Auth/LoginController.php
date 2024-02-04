@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Auth\Login;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -31,15 +32,17 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        // Email,Password
-        $validate = Validator::make($request->only(['Email','Password']), [
-            'Email' => 'email:rfs|required',
-            'Password' => 'required|min:8',
+        $validate = Validator::make($request->only(['email','password']), [
+            'email' => 'required',
+            'password' => 'required',
         ]);
         if($validate->fails()) return redirect()->route('login.index')->withErrors($validate);
 
         // success response
-        return true;
+        if(Auth::attempt(["username" => $request['email'], 'password' => $request['password']],true)) {
+            return redirect('/');
+        }
+        return false;
     }
 
     /**

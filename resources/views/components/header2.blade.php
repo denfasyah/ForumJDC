@@ -34,8 +34,7 @@
               >
             </li>
             <li>
-              <a href="/popular" class="text-white">Popular</a>
-            
+              <a href="#" class="text-white">Popular</a>
             </li>
           </ul>
         </div>
@@ -137,8 +136,7 @@
                     height="14"
                     fill="none"
                     stroke="#050505"
-                    stroke-linecap="round"
-               
+                    stroke-linecap="round"  
                     stroke-linejoin="round"
                     stroke-width="2"
                     viewBox="0 0 24 24"
@@ -150,61 +148,29 @@
                   </svg>
                 </a>
               </div>
-              <div
-                class="mt-1 group hover:bg-Blue hover:text-white p-2 rounded-lg"
-              >
-                <a
-                  href=""
-                  class="text-xs flex justify-between font-bold items-center"
-                >
-                  Language and Region
-                  <svg
-                    class="mr-2"
-                    width="14"
-                    height="14"
-                    fill="none"
-                    stroke="#050505"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
-                    <path d="M2 12h20"></path>
-                    <path
-                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                    ></path>
-                  </svg>
-                </a>
-              </div>
 
-              <div
-                class="mt-1 group hover:bg-Blue hover:text-white p-2 rounded-lg"
-              >
-                <a
-                  href=""
-                  class="flex justify-between text-xs font-bold items-center"
-                >
-                  Dark Mode
-                  <svg
-                    class="mr-2"
-                    width="14"
-                    height="14"
-                    fill="none"
-                    stroke="#050505"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"
-                    ></path>
-                  </svg>
+              
+              <div class="mt-1 group hover:bg-Blue hover:text-white p-2 rounded-lg">
+                <a href="" class="text-xs flex justify-between font-bold items-center">
+                    Language and Region
+                    <svg class="mr-2" width="14" height="14" fill="none" stroke="#050505" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+                  <path d="M2 12h20"></path>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
                 </a>
-              </div>
+            </div>
+
+            <div class="mt-1 group hover:bg-Blue hover:text-white p-2 rounded-lg">
+                <a href="" class="flex justify-between text-xs font-bold  items-center">
+                    Dark Mode
+                    <svg class="mr-2" width="14" height="14" fill="none" stroke="#050505" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"></path>
+                </svg>
+                </a>
+            </div>
+
+
             </div>
           </div>
         </div>
@@ -224,7 +190,7 @@
           >
             <li><a class="text-white">Home</a></li>
             <li><a class="text-white">Tags</a></li>
-            <li><a href="/popular" class="text-white">Popular</a></li>
+            <li><a class="text-white">Popular</a></li>
             <div class="flex mt-2">
               <a href="#" class=""
                 ><svg
