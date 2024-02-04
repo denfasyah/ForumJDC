@@ -13,7 +13,7 @@
     <!-- Navbar -->
     <div class="navbar bg-Blue shadow-md fixed z-30">
         <div class="navbar-start">
-            <a href="/" class="lg:ml-5 md:ml-5 sm:ml-0 text-xl text-red-500 font-bold">FORUM</a>
+            <a href="/" class="lg:ml-5 md:ml-5 sm:ml-0 text-xl text-red-500 font-bold">Forum</a>
             <div class="hidden lg:flex">
                 <ul class="menu-horizontal px-1 lg:ml-10 md:ml-5 sm:ml-2">
                     <li>

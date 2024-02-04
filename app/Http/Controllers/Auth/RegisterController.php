@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Models\Auth\Register;
-use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use App\Models\Auth\Register;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Validator;
 
@@ -32,21 +34,7 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        // FullName,Username,Email,,Password,RetypePassword
-        $validate = Validator::make($request->all(), [
-            'FullName' => 'min:4|max:36|required',
-            'Username' => 'min:4|max:18|required|unique:users,username',
-            'Email' => 'email:rfs|required|unique:users,email',
-            'Password' => 'required|min:8',
-            'RePassword' => 'required|min:8|same:Password',
-        ]);
-
-        if($validate->fails()) return redirect()->route('register.index')->withErrors($validate);
-        return response()->json([
-            "status" => 201,
-            "data" => $request->all(),
-            "message" => "Register Berhasil"
-        ]);
+        // On Livewire
     }
 
     /**
@@ -78,6 +66,10 @@ class RegisterController extends Controller
      */
     public function destroy(Register $register)
     {
-        //
+        
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        
+        Auth::logout();
     }
 }

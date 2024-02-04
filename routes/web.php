@@ -3,8 +3,9 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\ComponentController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,18 +19,12 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 // Main Routess
-Route::get('/', [MainController::class,'index']);
+Route::get('/', [MainController::class, 'index'])->name('index');
 
-Route::get('/user', function () {
-    return view('user/index');
-});
+Route::get('/user', [UserController::class, 'index'])->middleware('auth');
 Route::get('/user/profile', function () {
     return view('user/profile');
 });
-Route::get('/popular', function () {
-    return view('user/popular');
-});
-
 Route::get('/user/bookmart', function () {
     return view('user/bookmart');
 });
@@ -38,8 +33,11 @@ Route::get('/user/create', function () {
 });
 
 // Component Routes
-Route::get('/sidebar', [ComponentController::class,'sidebar']);
+Route::get('/sidebar', [ComponentController::class, 'sidebar']);
 
 // Auth Routes
-Route::resource('/register', RegisterController::class)->only(['index','store']);
+Route::resource('/register', RegisterController::class)->only(['index', 'store']);
 Route::resource('/login', LoginController::class);
+
+
+

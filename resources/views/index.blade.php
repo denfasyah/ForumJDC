@@ -1,379 +1,92 @@
-@include('components.header')
-
-<!-- hero -->
-<div class="hero bg-Background relative">
-  <img
-    src="{{ asset('img/banner.png') }}"
-    alt=""
-    class="w-full h-80 object-cover lg:object-contain md:object-contain mt-16"
-  />
-  <div class="avatar absolute mt-80">
-    <div class="bg-white mask mask-hexagon w-28 lg:w-40 md:w-40 sm:w-30">
-      <div
-        class="bg-Aqua mask mask-hexagon w-24 lg:w-32 md:w-36 sm:w-24 mx-auto"
-      >
-        <div class="w-16 lg:w-30 md:w-28 sm:w-20 mask mask-hexagon mt-3 mx-auto">
-          <span>.</span>
-          <img src="{{ asset('icon/jd.png') }}" class="w-10" />
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="absolute mt-80 right-0">
-    <div
-      class="flex flex-col lg:flex-row md:flex-row rounded-md squircle mt-14 lg:mr-10 p-1"
-    >
-      <button
-        class="flex items-center ml-5 py-1 lg:mt-0 md:mt-0 px-3 md:px-3 sm:px-2 bg-Blue font-semibold text-white lg:text-lg md:text-lg text-sm rounded-lg border-4 border-solid border-white gap-2"
-      >
-      <img src="{{ asset('svg/follow.svg') }}"/>
-        Follow
-      </button>
-      <button
-        class="flex items-center mt-1 lg:mt-0 md:mt-0 ml-5 py-1 px-3 bg-Aqua font-semibold text-white lg:text-lg md:text-lg text-sm rounded-lg border-4 border-solid border-white gap-2"
-      >
-      <img src="{{ asset('svg/message.svg') }}" alt="message">
-        Message
-      </button>
-    </div>
-  </div>
-</div>
-
-<!-- left menu-->
-<div class="bg-white pb-4 lg:pb-9 md:pb-7 sm:pb-6 pt-1">
-  <div class="relative mt-2">
-    <ul class="menu-horizontal ml-2 lg:ml-10 mt-6">
-      <div class="lg:mr-8 md:mr-8 sm:mr-5 mr-2">
-        <a href="#" class="text-xs lg:text-lg md:text-md sm:text-sm font-bold text-black"
-          >27.9M</a
-        >
-        <p
-          class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-        >
-          Followers
-        </p>
-      </div>
-
-      <div class="lg:mr-8 md:mr-8 sm:mr-5 mr-2">
-        <a href="#" class="text-xs lg:text-lg md:text-md sm:text-sm font-bold text-black"
-          >1.1K</a
-        >
-        <p
-          class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-        >
-          Following
-        </p>
-      </div>
-
-      <div class="hidden lg:inline md:inline lg:mr-8 md:mr-8 sm:mr-2 mr-2">
-        <a href="#" class="text-xs lg:text-lg md:text-md sm:text-sm font-bold text-black"
-          >59.7K</a
-        >
-        <p
-          class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-        >
-          Posts
-        </p>
-      </div>
-
-      <div class="hidden lg:inline lg:mr-8 md:mr-8 sm:mr-2 mr-2">
-        <a href="#" class="text-xs lg:text-lg md:text-md sm:text-sm font-bold text-black"
-          >45K</a
-        >
-        <p
-          class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-        >
-          Threads
-        </p>
-      </div>
-
-      <div class="hidden lg:inline">
-       
-        <p
-          class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-        >
-        <img src="{{ asset('svg/idn.svg') }}" alt="idn">
-          IDN
-        </p>
-      </div>
-
-      <details class="lg:hidden dropdown">
-        <summary class="m-1 font-medium text-sm">More</summary>
-        <ul
-          class="shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-16"
-        >
-          <div class="md:hidden">
-            <a
-href="#"
-              >59.7K</a
-            >
-            <p
-              class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-            >
-              Posts
-            </p>
-          </div>
-          <div class="mt-2">
-            <a
-href="#"
-              >45K</a
-            >
-            <p
-              class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-            >
-              Threads
-            </p>
-          </div>
-          <div class="mt-2">
-          <img src="{{ asset('svg/idn.svg') }}" alt="idn">
-            <p
-              class="text-xs lg:text-md md:text-sm sm:text-xs font-semibold text-slate-500"
-            >
-              IDN
-            </p>
-          </div>
-        </ul>
-      </details>
-    </ul>
-
-    <!-- right -->
-    <ul
-      class="absolute right-0 menu-horizontal mt-7 mr-2 lg:mr-10 md:mr-5 sm:mr-10"
-    >
-    <details class="lg:hidden dropdown">
-        <summary class="mt-2 mr-5 font-medium text text-sm">More</summary>
-        <ul
-          class="shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-16"
-        >
-          <div class="flex justify-center">
-          <a href="#"
-          ><img
-            src="{{ asset('icon/Discord.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt="dc"
-        /></a>
-          </div>
-          <div class="flex justify-center mt-2">
-          <a href="#"
-          ><img
-            src="{{ asset('icon/tiktok.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt="tiktok"
-        /></a>
-          </div>
-          <div class="flex justify-center mt-2  lg:hidden md:hidden sm:flex">
-          <a href="#"
-          ><img
-            src="{{ asset('icon/instagram.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt="ig"
-        /></a>
-          </div>
-        </ul>
-      </details>
-      <!-- hhh -->
-
-      <div class="lg:mr-8 md:mr-8 sm:mr-2 mr-2 hidden lg:inline">
-        <a href="#"
-          ><img
-            src="{{ asset('icon/Discord.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt=""
-        /></a>
-      </div>
-
-      <div class="lg:mr-8 md:mr-8 sm:mr-2 mr-2 hidden lg:inline">
-        <a href="#"
-          ><img
-            src="{{ asset('icon/tiktok.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt=""
-        /></a>
-      </div>
-
-      <div class="lg:mr-8 md:mr-8 sm:mr-2 mr-2 hidden lg:inline md:inline">
-        <a href="#"
-          ><img
-            src="{{ asset('icon/instagram.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt=""
-        /></a>
-      </div>
-
-      <div class="lg:mr-8 md:mr-8 sm:mr-2 mr-2">
-        <a href="#"
-          ><img
-            src="{{ asset('icon/twitter.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt=""
-        /></a>
-      </div>
-
-      <div>
-        <a href="#"
-          ><img
-            src="{{ asset('icon/facebook.png') }}"
-            class="lg:w-8 md:w-8 sm:w-5 w-5 mt-2 rounded-md"
-            alt=""
-        /></a>
-      </div>
-
-      
-    </ul>
-
-    <!-- center -->
-    <div
-      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 mt-6 lg:mt-12 md:mt-10 sm:mt-10"
-    >
-      <h1 class="font-bold text-lg lg:text-2xl md:text-xl pb-3 font-inter">Junior Dev</h1>
-    </div>
-  </div>
-</div>
+@include('components.header2')
 
 <!-- layout -->
-<div class="mx-2 mt-4">
+<br />
+<div class="mt-14 mx-3">
   <div class="flex justify-between flex-wrap lg:flex-nowrap">
     <div class="lg:w-1/3 w-2/5">
-      <div class="bg-white p-5 rounded-2xl">
-        <h2 class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4">
-          About Us
+      <div class="bg-white p-5 rounded-2xl relative">
+        <h2
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+        >
+          <img src="{{ asset('icon/community.png') }}" />
+          New Community
         </h2>
         <hr class="h-0.5 bg-slate-400" />
-        <p class="mt-5 text-xs lg:text-md md:text-md sm:text-sm">
-          Welcome to the Junior Developer Forum 👋 <br />
-          We are a virtual space where developers in the world of software
-          development can gather, share experiences and grow together. Created
-          specifically for junior developers, this forum is a warm and inclusive
-          place where you can ask questions, share ideas, and network with
-          fellow budding developers.
-        </p>
+
+        <div class="flex flex-wrap">
+          <div class="avatarmt-5 flex items-center">
+            <div
+              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-3"
+            >
+              <!-- <span>.</span> -->
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
+              Laravel
+              <span class="block text-xs text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
+          </div>
+          <button
+            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 bg-Blue text-white text-xs rounded-md lg:absolute px-1 font-bold lg:right-0 flex ml-16"
+          >
+            Join
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See All
+          </button>
+        </div>
+
+        <!-- Content for Friends section -->
       </div>
 
-      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+      <div class="bg-white p-5 rounded-2xl mt-3 relative">
         <h2
-          class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
+          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
         >
-          Badges
-          <a
-            class="text-Blue text-xs absolute right-0 mr-2 lg:text-md lg:mr-5 md:text-md md:mr-5 sm:text-sm sm:mr-5 mt-6"
-            >More</a
-          >
-        </h2>
-        <hr class="h-0.5 bg-slate-400" />
-        <ul class="menu menu-horizontal flex">
-          <li class="">
-            <a class=""
-              ><img
-                src="{{ asset('icon/Discord.png') }}"
-                class="lg:w-8 md:w-7 sm:w-5 w-4 mt-2 rounded-md"
-                alt=""
-            /></a>
-          </li>
-          <li class="">
-            <a class=""
-              ><img
-                src="{{ asset('icon/Discord.png') }}"
-                class="lg:w-8 md:w-7 sm:w-5 w-4 mt-2 rounded-md"
-                alt=""
-            /></a>
-          </li>
-          <li class="">
-            <a class=""
-              ><img
-                src="{{ asset('icon/Discord.png') }}"
-                class="lg:w-8 md:w-7 sm:w-5 w-4 mt-2 rounded-md"
-                alt=""
-            /></a>
-          </li>
-          <li class="">
-            <a class=""
-              ><img
-                src="{{ asset('icon/Discord.png') }}"
-                class="lg:w-8 md:w-7 sm:w-5 w-4 mt-2 rounded-md"
-                alt=""
-            /></a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="bg-white p-5 rounded-2xl mt-4 relative">
-        <h2
-          class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
-        >
-          Friends
-          <span class="ml-2 text-Blue text-xs lg:text-lg md:text-lg sm:text-md"
-            >78</span
-          >
-          <a
-            class="text-Blue text-xs absolute right-0 mr-2 lg:text-md lg:mr-5 md:text-md md:mr-5 sm:text-sm sm:mr-5 mt-6"
-            >More</a
-          >
+          <img src="{{ asset('icon/event.png') }}" />
+          Community Event
         </h2>
         <hr class="h-0.5 bg-slate-400" />
         <div class="flex">
-          <div class="avatar mt-5 flex items-center">
-            <div
-              class="bg-Aqua mask mask-hexagon w-9 lg:w-16 md:w-16 sm:w-10 mx-auto"
-            >
-              <div
-                class="w-7 lg:w-14 md:w-14 sm:w-8 mask mask-hexagon mx-auto mt-1"
+          <div class="avatar">
+            <div class="w-14 mt-5 rounded-full">
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-lg font-semibold">
+              Harajuku Festival
+              <span class="block text-sm text-slate-400"
+                >453 Thread 1.2k Post</span
               >
-                <!-- <span>.</span> -->
-                <img
-                  src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                />
-              </div>
-            </div>
-            <div class="ml-5">
-              <p class="font-bold text-xs lg:text-lg md:text-lg sm:text-md">
-                Adent
-              </p>
-              <p class="mb-2 text-xs lg:text-md md:text-md sm:text-md">
-                online
-              </p>
-            </div>
+            </p>
           </div>
           <button
-            class="lg:p-1 lg:px-3 md:p-1 md:px-3 bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-10 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
+            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
           >
-            Follow
+            See
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See More Event
           </button>
         </div>
 
         <!-- Content for Friends section -->
       </div>
     </div>
-
     <div class="w-1/2 bg-white lg:mx-4 h-14 rounded-2xl">
-      <div class="flex flex-wrap w-full">
-        <a class="ml-5 mr-3 lg:mr-5 md:mr-5 flex mt-2"
-          ><img
-            src="{{ asset('icon/amount.png') }}"
-            class="lg:w-8 lg:h-6 md:w-8 sm:w-5 w-5 mt-2 opacity-40"
-            alt=""
-        /></a>
-        <a href="#"
-          class="mr-3 lg:mr-5 md:mr-5 flex mt-4 text-xs lg:text-sm md:text-sm sm:text-sm text-slate-400"
-          >Post</a
-        >
-        <a
-          class="mr-3 lg:mr-5 md:mr-5 flex mt-4 text-xs lg:text-sm md:text-sm sm:text-sm font-semibold"
-          >Thread</a
-        >
-        <a
-          class="mr-3 lg:mr-5 md:mr-5 flex mt-4 text-xs lg:text-sm md:text-sm sm:text-sm text-slate-400"
-          >Photos</a
-        >
-        <a
-          class="mr-3 lg:mr-5 md:mr-5 flex mt-4 text-xs lg:text-sm md:text-sm sm:text-sm text-slate-400"
-          >Videos</a
-        >
-      </div>
-
-   
-
-      <div class="w-full bg-white mt-7 pb-3 rounded-2xl">
+      <div class="w-full bg-white pb-3 rounded-2xl">
         <div class="flex relative">
           <div class="avatar flex items-center ml-5 mt-5">
             <div class="mask mask-circle w-7 lg:w-12 md:w-14 sm:w-8 mx-auto">
@@ -590,98 +303,77 @@ href="#"
         <h2
           class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
         >
-          Photos
-          <span class="ml-2 text-Blue text-xs lg:text-lg md:text-lg sm:text-md"
-            >78</span
-          >
-          <a
-            class="text-Blue text-xs absolute right-0 mr-2 lg:text-md lg:mr-5 md:text-md md:mr-5 sm:text-sm sm:mr-5 mt-6"
-            >More</a
-          >
+          Marketplace
         </h2>
         <hr class="h-0.5 bg-slate-400" />
         <div class="flex">
-          <div class="columns-3 my-2">
-            <img
-              class="w-full aspect-square rounded-lg ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <!-- ... -->
+          <div class="avatar">
+            <div class="w-14 mt-5 rounded-full">
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-lg font-semibold">
+              Japan Market
+              <span class="block text-sm text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
           </div>
+          <button
+            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
+          >
+            See All
+          </button>
+        </div>
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See More Event
+          </button>
         </div>
 
-        <!-- Content for Photos section -->
+        <!-- Content for Friends section -->
       </div>
 
-      <div class="bg-white p-5 rounded-2xl mt-4 relative">
+      <div class="bg-white p-5 rounded-2xl mt-3 relative">
         <h2
           class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
         >
-          Videos
-          <span class="ml-2 text-Blue text-xs lg:text-lg md:text-lg sm:text-md"
-            >78</span
-          >
-          <a
-            class="text-Blue text-xs absolute right-0 mr-2 lg:text-md lg:mr-5 md:text-md md:mr-5 sm:text-sm sm:mr-5 mt-6"
-            >More</a
-          >
+          Top Creator
         </h2>
         <hr class="h-0.5 bg-slate-400" />
         <div class="flex">
-          <div class="columns-3 my-2">
-            <img
-              class="w-full aspect-square rounded-lg ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <img
-              class="w-full aspect-square rounded-lg mt-2 ..."
-              src="{{ asset('icon/anime.png') }}"
-            />
-            <!-- ... -->
+          <div class="avatar">
+            <div class="w-14 mt-5 rounded-full">
+              <img
+                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              />
+            </div>
+            <p class="mt-5 ml-5 text-lg font-semibold">
+              Rebecca
+              <span class="block text-sm text-slate-400"
+                >453 Thread 1.2k Post</span
+              >
+            </p>
           </div>
+          <button
+            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
+          >
+            See
+          </button>
         </div>
-        <!-- Content for Videos section -->
+        <hr class="h-0.5 mt-3 bg-slate-200" />
+        <div class="flex justify-center mt-5">
+          <button class="bg-Blue text-white w-full p-2 rounded-lg">
+            See More Event
+          </button>
+        </div>
+
+        <!-- Content for Friends section -->
       </div>
     </div>
   </div>
 </div>
-
-
 
 @include('components.footer')
