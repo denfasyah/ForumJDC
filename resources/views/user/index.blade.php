@@ -434,7 +434,7 @@
         <h2
           class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
         >
-          <img src="{{ asset('icon/community.png') }}" />
+          <img src="{{ asset('icon/topCom.png') }}" />
           Top Community
         </h2>
         <hr class="h-0.5 bg-slate-400" />
