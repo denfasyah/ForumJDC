@@ -29,7 +29,7 @@ Route::get('/user/bookmart', function () {
     return view('user/bookmart');
 });
 Route::get('/user/create', function () {
-    return view('user/create/community/createCommunity');
+    return view('user/create/thread/createThreadPhoto');
 });
 
 // Component Routes

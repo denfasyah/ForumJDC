@@ -1,4 +1,4 @@
-<footer class="bg-Blue footer p-8 text-white flex mt-20">
+<footer class="bg-Blue footer p-8 text-white flex mt-40">
     <aside class="w-1/3">
         <header class="mb-2 font-bold">Forum</header>
         <p>lorem</p>
