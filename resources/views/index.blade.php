@@ -1,52 +1,10 @@
 @include('components.header2')
 
-<!-- layout -->
+
 <br />
 <div class="mt-14 mx-3">
   <div class="flex justify-between flex-wrap lg:flex-nowrap">
-    <div class="lg:w-1/3 w-2/5">
-      <div class="bg-white p-5 rounded-2xl relative">
-        <h2
-          class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
-        >
-          <img src="{{ asset('icon/community.png') }}" />
-          New Community
-        </h2>
-        <hr class="h-0.5 bg-slate-400" />
-
-        <div class="flex flex-wrap">
-          <div class="avatarmt-5 flex items-center">
-            <div
-              class="w-12 lg:w-14 md:w-14 sm:w-14 mask mask-circle mx-auto lg:mt-5 md:mt-5 sm:mt-3"
-            >
-              <!-- <span>.</span> -->
-              <img
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
-            <p class="mt-5 ml-5 text-xs lg:text-lg font-semibold">
-              Laravel
-              <span class="block text-xs text-slate-400"
-                >453 Thread 1.2k Post</span
-              >
-            </p>
-          </div>
-          <button
-            class="lg:p-2 lg:px-5 lg:mt-8 lg:mr-5 md:p-1 md:px-3 bg-Blue text-white text-xs rounded-md lg:absolute px-1 font-bold lg:right-0 flex ml-16"
-          >
-            Join
-          </button>
-        </div>
-        <hr class="h-0.5 mt-3 bg-slate-200" />
-        <div class="flex justify-center mt-5">
-          <button class="bg-Blue text-white w-full p-2 rounded-lg">
-            See All
-          </button>
-        </div>
-
-        <!-- Content for Friends section -->
-      </div>
-
+    <div class="w-1/3">
       <div class="bg-white p-5 rounded-2xl mt-3 relative">
         <h2
           class="gap-2 text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
@@ -56,19 +14,13 @@
         </h2>
         <hr class="h-0.5 bg-slate-400" />
         <div class="flex">
-          <div class="avatar">
-            <div class="w-14 mt-5 rounded-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
+           
             <p class="mt-5 ml-5 text-lg font-semibold">
-              Harajuku Festival
+              Competition
               <span class="block text-sm text-slate-400"
-                >453 Thread 1.2k Post</span
+                >Lorem, ipsum.</span
               >
             </p>
-          </div>
           <button
             class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
           >
@@ -85,7 +37,7 @@
         <!-- Content for Friends section -->
       </div>
     </div>
-    <div class="w-1/2 bg-white lg:mx-4 h-14 rounded-2xl">
+    <div class="w-3/5 bg-white lg:mx-4 h-14 rounded-2xl">
       <div class="w-full bg-white pb-3 rounded-2xl">
         <div class="flex relative">
           <div class="avatar flex items-center ml-5 mt-5">
@@ -295,82 +247,19 @@
             </svg>
           </button>
         </div>
-      </div>
-    </div>
 
-    <div class="lg:w-1/3 w-2/5 mt-4 lg:mt-0">
-      <div class="bg-white p-5 rounded-2xl relative">
-        <h2
-          class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
-        >
-          Marketplace
-        </h2>
-        <hr class="h-0.5 bg-slate-400" />
-        <div class="flex">
-          <div class="avatar">
-            <div class="w-14 mt-5 rounded-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
-            <p class="mt-5 ml-5 text-lg font-semibold">
-              Japan Market
-              <span class="block text-sm text-slate-400"
-                >453 Thread 1.2k Post</span
-              >
-            </p>
-          </div>
-          <button
-            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
-          >
-            See All
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+              <path d="m12 16 4-4-4-4"></path>
+              <path d="M8 12h8"></path>
+            </svg>
           </button>
         </div>
-        <hr class="h-0.5 mt-3 bg-slate-200" />
-        <div class="flex justify-center mt-5">
-          <button class="bg-Blue text-white w-full p-2 rounded-lg">
-            See More Event
+              <path d="M12 2a10 10 0 1 0 0 20 10 10 0 1 0 0-20z"></path>
+              <path d="m12 16 4-4-4-4"></path>
+              <path d="M8 12h8"></path>
+            </svg>
           </button>
         </div>
-
-        <!-- Content for Friends section -->
-      </div>
-
-      <div class="bg-white p-5 rounded-2xl mt-3 relative">
-        <h2
-          class="text-md lg:text-xl md:text-xl sm:text-md font-bold mb-4 flex items-center"
-        >
-          Top Creator
-        </h2>
-        <hr class="h-0.5 bg-slate-400" />
-        <div class="flex">
-          <div class="avatar">
-            <div class="w-14 mt-5 rounded-full">
-              <img
-                src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-              />
-            </div>
-            <p class="mt-5 ml-5 text-lg font-semibold">
-              Rebecca
-              <span class="block text-sm text-slate-400"
-                >453 Thread 1.2k Post</span
-              >
-            </p>
-          </div>
-          <button
-            class="lg:px-5 md:p-1 md:px-3 font-bold bg-Blue text-white text-xs rounded-md absolute mt-7 px-1 lg:mt-7 lg:mr-5 md:mt-10 md:mr-5 mr-2 right-0"
-          >
-            See
-          </button>
-        </div>
-        <hr class="h-0.5 mt-3 bg-slate-200" />
-        <div class="flex justify-center mt-5">
-          <button class="bg-Blue text-white w-full p-2 rounded-lg">
-            See More Event
-          </button>
-        </div>
-
-        <!-- Content for Friends section -->
       </div>
     </div>
   </div>

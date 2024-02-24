@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @livewireStyles
+    @livewireScripts
     <title>Junior Developer Community | Forum</title>
   </head>
 
@@ -50,7 +51,7 @@
         </div>
       </div>
     </div>
-    @livewireScripts
+   
   </body>
   <script>
     const _h = document.querySelectorAll('input[id="hide"]')
