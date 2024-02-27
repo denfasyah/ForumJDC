@@ -8,14 +8,14 @@ export default {
   theme: {
       container: {
           center: true,
-          padding: "16px",
+          padding: "40px",
         },
       extend: {
           fontFamily: {
               'inter': ['Inter', 'sans-serif'], 
             },
           colors: {
-              Blue: '#178EFC', 
+              Blue: '#004aad', 
               DarkBlue: '#1077D5',
               Aqua: '#07E1FF',
               Background : '#EBEBEB',
