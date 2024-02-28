@@ -28,8 +28,18 @@ Route::get('explore/', [Explore::class, 'index'])->name('explore');
 Route::get('job/', [Job::class, 'index'])->name('job');
 Route::get('learning/', [Learning::class, 'index'])->name('learn');
 Route::get('quest/', [Quest::class, 'index'])->name('quest');
+Route::get('profile/', function () {
+    return view('profile.index');
+})->name('profile');
 
 // Main Routess
+
+
+
+// Auth Routes
+Route::resource('/register', RegisterController::class)->only(['index', 'store']);
+Route::resource('/login', LoginController::class);
+
 
 Route::get('/user', [UserController::class, 'index'])->middleware('auth');
 Route::get('/user/profile', function () {
@@ -44,10 +54,3 @@ Route::get('/user/create', function () {
 
 // Component Routes
 Route::get('/sidebar', [ComponentController::class, 'sidebar']);
-
-// Auth Routes
-Route::resource('/register', RegisterController::class)->only(['index', 'store']);
-Route::resource('/login', LoginController::class);
-
-
-

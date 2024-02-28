@@ -402,6 +402,13 @@
                 aria-current="page"
                 >Quest</a
               >
+              @elseif(request()->is('profile'))
+              <a
+                href="{{ route('quest') }}"
+                class="text-sm pl-2 capitalize leading-normal text-slate-700 before:float-left before:pr-2 before:text-gray-600 before:content-['/']"
+                aria-current="page"
+                >Profile</a
+              >
               @endif
             </ol>
             @if(request()->is('explore'))
@@ -414,6 +421,8 @@
             <h6 class="mb-0 font-bold capitalize">Questions</h6>
             @elseif(request()->is('job'))
             <h6 class="mb-0 font-bold capitalize">Job</h6>
+            @elseif(request()->is('profile'))
+            <h6 class="mb-0 font-bold capitalize">Profile</h6>
             @endif
           </nav>
 
@@ -459,8 +468,8 @@
                 >
                   <li>
                     <a
+                      href="{{ route('profile') }}"
                       class="py-1.2 lg:ease-soft clear-both block w-full whitespace-nowrap border-0 bg-transparent px-4 text-left font-normal text-slate-500 hover:bg-gray-200 hover:text-slate-700 dark:text-white dark:hover:bg-gray-200/80 dark:hover:text-slate-700 lg:transition-colors lg:duration-300"
-                      href="javascript:;"
                       >Profile</a
                     >
                   </li>
@@ -731,7 +740,7 @@
         </div>
       </div>
       --}} @yield('explore') @yield('quest') @yield('job') @yield('event')
-      @yield('learn')
+      @yield('learn') @yield('profile')
     </main>
     <div fixed-plugin>
       <a
