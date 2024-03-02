@@ -6,11 +6,11 @@ use Livewire\Component;
 
 class DisLikesButton extends Component
 {
-    public $count;
+    public $value;
     public $condition = true;
     public function DisLikesCount() {
         $this->condition ? $this->condition = false : $this->condition = true;
-        $this->condition === false ? $this->count++ : $this->count--;
+        $this->condition === false ? $this->value++ : $this->value--;
     }
     public function render()
     {

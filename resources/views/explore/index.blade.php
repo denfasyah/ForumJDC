@@ -43,11 +43,11 @@
                     {{-- <img src="{{ asset('img/banner.png') }}" alt="" class="w-full rounded-2xl"> --}}
                 </div>
                 <div class="flex gap-5 relative px-1">
-                    @livewire('LikesButton', ['count' => $value->like])
-                    @livewire('DisLikesButton', ['count' => $value->dislike])
+                    @livewire('LikesButton', ['value' => $value->like])
+                    @livewire('DisLikesButton', ['value' => $value->dislike])
                     <div class="flex items-baseline">
                         <!-- icon message -->
-                        <a href="#">
+                        <a href="{{ route('explore', ['uid' => $value->id]) }}">
                             <svg class="w-4" fill="none" stroke="#bfbfbf" stroke-linecap="round"
                                 stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -60,25 +60,24 @@
                             3.2K
                         </span>
                     </div>
-                    <div class="flex items-baseline">
-                        <!-- icon share -->
-                        <a href="#">
-                            <svg class="w-4" fill="none" stroke="#bfbfbf" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18 2a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
-                                <path d="M6 9a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
-                                <path d="M18 16a3 3 0 1 0 0 6 3 3 0 1 0 0-6z"></path>
-                                <path d="m8.59 13.51 6.83 3.98"></path>
-                                <path d="m15.41 6.51-6.82 3.98"></path>
-                            </svg>
-                        </a>
-                        <span class="text-slate-400 ml-1 text-xs lg:text-sm font-semibold">
-                            {{ $value->share }}
-                        </span>
-                    </div>
+                    @livewire('ShareButton', ['value' => $value->share, 'url' => route('explore', ['uid' => $value->id])])
                 </div>
             </div>
         @endforeach
     </div>
+@endsection
+@section('js-explore')
+    <script>
+        const x = document.querySelectorAll('#shareExplore')
+        x.forEach(e => {
+            e.addEventListener('click', () => {
+                let att = e.getAttribute('data-copy'),
+                    c = navigator.clipboard.writeText(att)
+                e.setAttribute('data-tip', 'Copied')
+                setTimeout(() => {
+                    e.removeAttribute('data-tip')
+                }, 1000);
+            })
+        });
+    </script>
 @endsection

@@ -8,9 +8,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::find(auth()->user()->id)
-            ->with('socialMedia.platform');
-            
-        return view('user.index', compact('user'));
+        $user = User::with('socialMedia.platform')->find(auth()->user()->id);
+        return view('profile.index', compact('user'));
     }
 }

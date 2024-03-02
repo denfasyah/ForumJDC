@@ -33,9 +33,7 @@ Route::get('/quest', [Quest::class, 'index'])->name('quest');
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/profile', function () {
-        return view('profile.index');
-    })->name('profile');
+    Route::get('/profile', [UserController::class, 'index'])->name('profile');
     Route::delete('/logout', [LoginController::class, 'destroy'])->name('login.destroy');
 });
 // Main Routess
