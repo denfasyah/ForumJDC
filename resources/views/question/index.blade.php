@@ -62,7 +62,7 @@
                 </p>
                 <a
                   class="mt-auto mb-0 text-lg font-semibold leading-normal group text-Blue"
-                  href="javascript:;"
+                  href="{{ route('answer') }}"
                 >
                   Answer
                   <i
@@ -118,5 +118,5 @@
     </div>
   </div>
 
-  @endsection
 </div>
+@endsection

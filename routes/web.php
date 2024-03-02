@@ -29,6 +29,10 @@ Route::get('/job', [Job::class, 'index'])->name('job');
 Route::get('/learning', [Learning::class, 'index'])->name('learn');
 Route::get('/learning/{type}', [Learning::class, 'single'])->name('learnWithType');
 Route::get('/quest', [Quest::class, 'index'])->name('quest');
+Route::get('/answer', function () {
+    return view('question/answer.index');
+})->name('answer');
+
 Route::get('/profile', function () {
     return view('profile.index');
 })->name('profile');

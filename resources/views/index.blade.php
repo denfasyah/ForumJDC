@@ -343,7 +343,7 @@
           />
           <li class="mt-0.5 flex justify-center w-full">
             <button
-              class="mr-5 bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+              class="mx-5 w-full rounded mr-5 bg-Blue text-white lg:px-10 md:px-7 sm:px-5 px-4 py-1"
               onclick="my_modal_about.showModal()"
             >
               Create
@@ -397,8 +397,70 @@
                 </div>
               </div>
             </dialog>
-        </li>
-        @endif
+          </li>
+
+          @endif @if (request()->is('job'))
+          <hr
+            class="h-px mt-5 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent"
+          />
+          <li class="mt-0.5 flex justify-center w-full">
+            <button
+              class="mx-5 w-full rounded bg-Blue text-white lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+              onclick="my_modal_about.showModal()"
+            >
+              Create
+            </button>
+            <dialog id="my_modal_about" class="modal">
+              <div class="modal-box">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h1 class="text-center font-bold text-lg">Create Job</h1>
+                <hr class="h-0.5 bg-slate-400" />
+                <div class="mb-2 mt-5">
+                  <label for="" class="font-semibold">Title</label>
+                  <input
+                    type="text"
+                    class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="" class="font-semibold">Date</label>
+                  <input
+                    type="date"
+                    class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="" class="font-semibold">Desc</label>
+                  <textarea
+                    class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none placeholder-slate-500 px-4 py-2 w-full text-black"
+                    rows="4"
+                    placeholder="Ceritakan tentang diri kamu"
+                  ></textarea>
+                </div>
+                <div class="mb-2">
+                  <label for="" class="font-bold">Photo</label>
+                  <input
+                    class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                    type="file"
+                  />
+                </div>
+                <div class="flex justify-end gap-2 mt-5">
+                  <button
+                    class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+                  >
+                    Create
+                  </button>
+                </div>
+              </div>
+            </dialog>
+          </li>
+          @endif
         </ul>
       </div>
     </aside>
@@ -803,7 +865,7 @@
         </div>
       </div>
       --}} @yield('explore') @yield('quest') @yield('job') @yield('event')
-      @yield('learn') @yield('profile')
+      @yield('learn') @yield('profile') @yield('answer')
     </main>
     <div fixed-plugin>
       <a

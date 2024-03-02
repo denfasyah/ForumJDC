@@ -12,7 +12,7 @@
     </div>
 
     <div
-      class="relative flex flex-col flex-auto min-w-0 p-4 mx-6 -mt-16 overflow-hidden break-words border-0 shadow-blur rounded-2xl bg-white/80 bg-clip-border backdrop-blur-2xl backdrop-saturate-200"
+      class="relative flex flex-col flex-auto min-w-0 p-4 mx-6 -mt-16  break-words border-0 shadow-blur rounded-2xl bg-white/80 bg-clip-border backdrop-blur-2xl backdrop-saturate-200"
     >
       <div class="flex flex-wrap -mx-3">
         <div class="flex-none w-auto max-w-full px-3">
@@ -147,7 +147,6 @@
               </li>
 
               <li class="z-30 flex-auto ">
-
                 <div class="dropdown dropdown-bottom dropdown-end">
                   <div tabindex="0" role="button" class="">
                       <svg class="w-5 lg:w-6 md:w-6 sm:w-6" fill="none" stroke="#000000" stroke-linecap="round"
@@ -245,7 +244,7 @@
 
 
       <!-- bio & skills -->
-      <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
+      <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12 z-[-1]">
         <!-- biodata -->
         <!-- <div
           class="flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
