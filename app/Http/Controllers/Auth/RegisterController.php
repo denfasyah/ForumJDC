@@ -66,10 +66,6 @@ class RegisterController extends Controller
      */
     public function destroy(Register $register)
     {
-        
-        request()->session()->invalidate();
-        request()->session()->regenerateToken();
-        
-        Auth::logout();
+
     }
 }

@@ -6,11 +6,13 @@ use Livewire\Component;
 
 class LikesButton extends Component
 {
-    public $count = 0;
+    public $count;
     public $condition = true;
+
     public function LikesCount() {
         $this->condition ? $this->condition = false : $this->condition = true;
         $this->condition === false ? $this->count++ : $this->count--;
+
     }
     public function render()
     {

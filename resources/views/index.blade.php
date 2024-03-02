@@ -267,29 +267,32 @@
                         </div>
                     </div>
                     <ul class="flex flex-row justify-end pl-0 mb-0 list-none md-max:w-full">
+                        @auth
                         <div class="relative">
-                            <button dropdown-trigger aria-expanded="false" type="button"
-                                class="inline-block font-bold text-center text-white uppercase align-middle transition-all rounded-lg cursor-pointer leading-pro text-sm ease-soft-in tracking-tight-soft bg-150 bg-x-25 hover:scale-102 active:opacity-85">
-                                <div class="avatar flex items-center">
-                                    <div class="mask mask-circle w-7 lg:w-12 md:w-14 sm:w-8">
-                                        <img src="{{ asset('icon/anime.png') }}" />
+                            <div class="dropdown dropdown-bottom dropdown-end">
+                                <div tabindex="0" role="button" class="">
+                                    <div class="avatar flex items-center">
+                                        <div class="mask mask-circle w-7 lg:w-12 md:w-14 sm:w-8">
+                                            <img src="{{ asset('icon/anime.png') }}" />
+                                        </div>
                                     </div>
                                 </div>
-                            </button>
-                            <p class="hidden transform-dropdown-show"></p>
-                            <ul dropdown-menu
-                                class="z-10 text-sm lg:shadow-soft-3xl duration-250 before:duration-350 before:font-awesome before:ease-soft before:text-5.5 transform-dropdown pointer-events-none absolute left-auto top-1/2 mt-2 list-none rounded-lg border-0 border-solid border-transparent bg-white bg-clip-padding px-0 w-28 py-2 text-left text-slate-500 opacity-0 transition-all before:absolute before:right-16 before:left-auto before:top-0 before:z-40 before:text-white before:transition-all before:content-['\f0d8']">
-                                <li>
-                                    <a href="{{ route('profile') }}"
-                                        class="py-1.2 lg:ease-soft clear-both block w-full whitespace-nowrap border-0 bg-transparent px-4 text-left font-normal text-slate-500 hover:bg-gray-200 hover:text-slate-700 dark:text-white dark:hover:bg-gray-200/80 dark:hover:text-slate-700 lg:transition-colors lg:duration-300">Profile</a>
-                                </li>
-                                <li>
-                                    <a class="py-1.2 lg:ease-soft clear-both block w-full whitespace-nowrap border-0 bg-transparent px-4 text-left font-normal text-slate-500 hover:bg-gray-200 hover:text-slate-700 dark:text-white dark:hover:bg-gray-200/80 dark:hover:text-slate-700 lg:transition-colors lg:duration-300"
-                                        href="javascript:;">Logout</a>
-                                </li>
-                            </ul>
+                                <ul tabindex="0"
+                                    class="dropdown-content z-[1] menu shadow bg-base-100 rounded-box w-36">
+                                    <li class="">
+                                        <a href="{{ route('profile') }}">Profile</a>
+                                    </li>
+                                    <li class="">
+                                        <form action="{{ route('login.destroy') }} " method="POST">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit">Logout</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-
+                        @endauth
                         <li class="flex items-center pl-4 xl:hidden">
                             <a href="javascript:;"
                                 class="block p-0 text-sm transition-all ease-nav-brand text-slate-500" sidenav-trigger>

@@ -6,7 +6,7 @@ use Livewire\Component;
 
 class DisLikesButton extends Component
 {
-    public $count = 0;
+    public $count;
     public $condition = true;
     public function DisLikesCount() {
         $this->condition ? $this->condition = false : $this->condition = true;

@@ -1,7 +1,7 @@
 <div class="flex items-baseline">
     <!-- icon like -->
     <button wire:click="LikesCount">
-        <svg class="w-3 lg:w-5 md:w-5 sm:w-5 mt-0.5 lg:mt-0 md:mt-0 sm:mt-0" fill="{{ $condition == true ? 'none' : '#bfbfbf' }}" stroke="#bfbfbf"
+        <svg class="w-4" fill="{{ $condition == true ? 'none' : '#bfbfbf' }}" stroke="#bfbfbf"
             stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg">
             <path

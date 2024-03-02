@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\Models\Explore;
 use Illuminate\Http\Request;
 
 class ExploreController extends Controller
@@ -13,6 +15,7 @@ class ExploreController extends Controller
         if ($request->has("uid")) {
             return view("explore.single");
         }
-        return view('explore.index');
+        $explore = Explore::with('user')->get();
+        return view('explore.index', compact('explore'));
     }
 }
