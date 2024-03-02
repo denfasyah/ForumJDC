@@ -10,6 +10,7 @@
         class="absolute inset-y-0 w-full h-full bg-center object-cover"
       />
     </div>
+
     <div
       class="relative flex flex-col flex-auto min-w-0 p-4 mx-6 -mt-16 overflow-hidden break-words border-0 shadow-blur rounded-2xl bg-white/80 bg-clip-border backdrop-blur-2xl backdrop-saturate-200"
     >
@@ -28,18 +29,20 @@
         <div class="flex-none w-auto max-w-full px-3 my-auto">
           <div class="h-full">
             <h5 class="mb-1">Adent</h5>
-            <p class="mb-0 font-semibold leading-normal text-sm">Member</p>
+            <p class="mb-0 font-semibold leading-normal text-sm">adent@example.com</p>
           </div>
         </div>
         <div
           class="w-full max-w-full px-3 mx-auto mt-4 sm:my-auto sm:mr-0 md:w-1/2 md:flex-none lg:w-4/12"
         >
-          <div class="relative right-0">
+          <div class="relative right-0 ">
             <ul
-              class="relative flex flex-wrap p-1 list-none bg-transparent rounded-xl"
+              class="relative flex flex-wrap gap-5 p-1 list-none bg-transparent rounded-xl"
               nav-pills
               role="tablist"
             >
+
+
               <li class="z-30 flex-auto text-center">
                 <a
                   class="z-30 block w-full px-0 py-1 mb-0 transition-all border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700"
@@ -88,6 +91,7 @@
                   <span class="ml-1">Messages</span>
                 </a>
               </li>
+
               <li class="z-30 flex-auto text-center">
                 <a
                   class="z-30 block w-full px-0 py-1 mb-0 transition-colors border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700"
@@ -141,19 +145,43 @@
                   <span class="ml-1">Settings</span>
                 </a>
               </li>
+
+              <li class="z-30 flex-auto ">
+
+                <div class="dropdown dropdown-bottom dropdown-end">
+                  <div tabindex="0" role="button" class="">
+                      <svg class="w-5 lg:w-6 md:w-6 sm:w-6" fill="none" stroke="#000000" stroke-linecap="round"
+                          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 11a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                          <path d="M19 11a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                          <path d="M5 11a1 1 0 1 0 0 2 1 1 0 1 0 0-2z"></path>
+                      </svg>
+                  </div>
+                  <ul tabindex="0" class="dropdown-content z-[1] menu shadow bg-base-100 rounded-box w-36">
+                      <li class="px-3 py-1.5 hover:bg-base-300 transition-all rounded ">Item 1</li>
+                      <li class="px-3 py-1.5 hover:bg-base-300 transition-all rounded ">Item 2</li>
+                  </ul>
+              </div>
+              </li>
+
             </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="w-full p-6 mx-auto">
-    <div class="flex flex-wrap -mx-3">
-      <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
-        <div
-          class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
-        >
 
+  
+  <div class="w-full p-6 mx-auto">
+    <div class="flex justify-center flex-wrap -mx-3">
+
+
+       <!-- about me -->
+       <div class="w-full px-3 mt-5 lg:mt-0 mb-6 lg:mb-0 lg:w-7/12 lg:flex-none">
+        <div
+          class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+        >
           <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
             <div class="flex justify-between flex-wrap -mx-3">
               <div
@@ -161,41 +189,44 @@
               >
                 <h6 class="mb-0">About Me</h6>
               </div>
-              <div
-              class="absolute right-0"
-              >
-               
-              <button class="mr-5" onclick="my_modal_about.showModal()"><i
-                class="leading-normal fas fa-user-edit text-sm text-slate-400"
-              ></i></button>
-              <dialog id="my_modal_about" class="modal">
-                <div class="modal-box">
-                  <form method="dialog">
-                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                  </form>
-                  <h1 class="text-center font-bold text-lg">About Me</h1>
-                  <div class="mb-4">
-                    <label for="" class="font-semibold">Desc</label>
-                    <textarea
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none placeholder-slate-500 px-4 py-2 w-full text-black"
-                      rows="4"
-                      placeholder="Ceritakan tentang diri kamu"
-                    ></textarea>
+              <div class="absolute right-0">
+                <button class="mr-5" onclick="my_modal_about.showModal()">
+                  <i
+                    class="leading-normal fas fa-user-edit text-sm text-slate-400"
+                  ></i>
+                </button>
+                <dialog id="my_modal_about" class="modal">
+                  <div class="modal-box">
+                    <form method="dialog">
+                      <button
+                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                      >
+                        ✕
+                      </button>
+                    </form>
+                    <h1 class="text-center font-bold text-lg">About Me</h1>
+                    <div class="mb-4">
+                      <label for="" class="font-semibold">Desc</label>
+                      <textarea
+                        class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none placeholder-slate-500 px-4 py-2 w-full text-black"
+                        rows="4"
+                        placeholder="Ceritakan tentang diri kamu"
+                      ></textarea>
+                    </div>
+                    <div class="flex justify-end gap-2 mt-5">
+                      <button
+                        class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+                      >
+                        Update
+                      </button>
+                    </div>
                   </div>
-                  <div class="flex justify-end gap-2 mt-5">
-                    <button
-                      class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
-                    >
-                     Update
-                    </button>
-                  </div>
-                </div>
-              </dialog>
+                </dialog>
               </div>
             </div>
           </div>
           <div class="flex-auto p-4">
-            <p class="leading-normal text-md">
+            <p class="leading-normal text-md line-clamp-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis
               soluta ipsa explicabo iusto voluptatibus autem laudantium omnis
               ipsum a error, exercitationem cum. Quas, aliquid temporibus
@@ -208,106 +239,117 @@
             />
           </div>
         </div>
+        
       </div>
+      <!-- end about me -->
+
+
+      <!-- bio & skills -->
       <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
-        <div
-          class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+        <!-- biodata -->
+        <!-- <div
+          class="flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
         >
-          <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
+          <div class="p-4 pb-0 relative mb-0 bg-white border-b-0 rounded-t-2xl">
             <div class="flex flex-wrap -mx-3">
               <div
                 class="flex items-center w-full max-w-full px-3 shrink-0 md:w-8/12 md:flex-none"
               >
                 <h6 class="mb-0">Biodata</h6>
               </div>
-              <div
-              class="absolute right-0"
-              >
-               
-              <button class="mr-5" onclick="my_modal_biodata.showModal()"><i
-                class="leading-normal fas fa-user-edit text-sm text-slate-400"
-              ></i></button>
-              <dialog id="my_modal_biodata" class="modal">
-                <div class="modal-box">
-                  <form method="dialog">
-                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                  </form>
-                  <h1 class="text-center font-bold text-lg">Biodata</h1>
-                  <div class="mb-2 mt-5">
-                    <label for="" class="font-semibold">FullName</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                  </div>
-                  <div class="mb-2 flex justify-between gap-2">
-                    <div class="block w-1/2">
-                    <label for="" class="font-semibold">Age</label>
-                    <input
-                      type="number"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                  </div>
-                  <div class="block w-1/2">
-                      <label for="" class="font-semibold">Gender</label>
-                      <select class="select border-2 bg-slate-200 border-Blue mt-1 rounded-xl focus:outline-none px-4 py-2 w-full">
+              <div class="absolute right-0">
+                <button class="mr-5" onclick="my_modal_biodata.showModal()">
+                  <i
+                    class="leading-normal fas fa-user-edit text-sm text-slate-400"
+                  ></i>
+                </button>
+                <dialog id="my_modal_biodata" class="modal">
+                  <div class="modal-box">
+                    <form method="dialog">
+                      <button
+                        class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                      >
+                        ✕
+                      </button>
+                    </form>
+                    <h1 class="text-center font-bold text-lg">Biodata</h1>
+                    <div class="mb-2 mt-5">
+                      <label for="" class="font-semibold">FullName</label>
+                      <input
+                        type="text"
+                        class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                      />
+                    </div>
+                    <div class="mb-2 flex justify-between gap-2">
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">Age</label>
+                        <input
+                          type="number"
+                          class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        />
+                      </div>
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">Gender</label>
+                        <select
+                          class="select border-2 bg-slate-200 border-Blue mt-1 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        >
                           <option disabled selected class="hidden"></option>
                           <option>Male</option>
                           <option>Female</option>
                         </select>
                       </div>
-                  </div>
-                  
-                  <div class="mb-2 flex justify-between gap-2">
-                    <div class="block w-1/2">
-                    <label for="" class="font-semibold">City</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                  </div>
-                  <div class="block w-1/2">
-                    <label for="" class="font-semibold">Email</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                      </div>
-                  </div>
-                  <div class="mb-2">
-                    <label for="" class="font-semibold">Education</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                  </div>
+                    </div>
 
-                  <div class="mb-2 flex justify-between gap-2">
-                    <div class="block w-1/2">
-                    <label for="" class="font-semibold">Github</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
-                  </div>
-                  <div class="block w-1/2">
-                    <label for="" class="font-semibold">Linkedin</label>
-                    <input
-                      type="text"
-                      class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
-                    />
+                    <div class="mb-2 flex justify-between gap-2">
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">City</label>
+                        <input
+                          type="text"
+                          class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        />
                       </div>
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">Email</label>
+                        <input
+                          type="text"
+                          class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        />
+                      </div>
+                    </div>
+                    <div class="mb-2">
+                      <label for="" class="font-semibold">Education</label>
+                      <input
+                        type="text"
+                        class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                      />
+                    </div>
+
+                    <div class="mb-2 flex justify-between gap-2">
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">Github</label>
+                        <input
+                          type="text"
+                          class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        />
+                      </div>
+                      <div class="block w-1/2">
+                        <label for="" class="font-semibold">Linkedin</label>
+                        <input
+                          type="text"
+                          class="border-2 border-Blue mt-1 bg-slate-200 rounded-xl focus:outline-none px-4 py-2 w-full"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="flex justify-end gap-2 mt-5">
+                      <button
+                        class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+                      >
+                        Update
+                      </button>
+                    </div>
                   </div>
-                  
-                  <div class="flex justify-end gap-2 mt-5">
-                    <button
-                      class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
-                    >
-                     Update
-                    </button>
-                  </div>
-                </div>
-              </dialog>
+                </dialog>
               </div>
             </div>
           </div>
@@ -371,53 +413,58 @@
               </li>
             </ul>
           </div>
-        </div>
-      </div>
-      <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
+        </div> -->
+        
+        <!-- skills -->
         <div
-          class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+          class=" flex relative pb-6 flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
         >
           <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
             <h6 class="mb-0">Skills</h6>
           </div>
-          <div
-              class="absolute right-0 mt-4"
-              >
-               
-              <button class="mr-5" onclick="my_modal_skills.showModal()"><i
+          <div class="absolute right-0 mt-4">
+            <button class="mr-5" onclick="my_modal_skills.showModal()">
+              <i
                 class="leading-normal fas fa-user-edit text-sm text-slate-400"
-              ></i></button>
-              <dialog id="my_modal_skills" class="modal">
-                <div class="modal-box">
-                  <form method="dialog">
-                    <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
-                  </form>
-                  <h1 class="text-center font-bold text-lg">Skills</h1>
-                  <div class="mb-4">
-                    <label for="" class="font-semibold">Skill</label>
-                    <select class="select border-2 bg-slate-200 border-Blue mt-1 rounded-xl focus:outline-none px-4 py-2 w-full">
-                      <option disabled selected class="hidden"></option>
-                      <option>Html</option>
-                      <option>Css</option>
-                    </select>
-                  </div>
-                  <div class="flex justify-end gap-2 mt-5">
-                    <button
-                      class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
-                    >
-                     Update
-                    </button>
-                  </div>
+              ></i>
+            </button>
+            <dialog id="my_modal_skills" class="modal">
+              <div class="modal-box">
+                <form method="dialog">
+                  <button
+                    class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
+                  >
+                    ✕
+                  </button>
+                </form>
+                <h1 class="text-center font-bold text-lg">Skills</h1>
+                <div class="mb-4">
+                  <label for="" class="font-semibold">Skill</label>
+                  <select
+                    class="select border-2 bg-slate-200 border-Blue mt-1 rounded-xl focus:outline-none px-4 py-2 w-full"
+                  >
+                    <option disabled selected class="hidden"></option>
+                    <option>Html</option>
+                    <option>Css</option>
+                  </select>
                 </div>
-              </dialog>
+                <div class="flex justify-end gap-2 mt-5">
+                  <button
+                    class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+                  >
+                    Update
+                  </button>
+                </div>
               </div>
+            </dialog>
+          </div>
           <div class="flex mx-5 gap-5 mt-2 flex-wrap">
             <div className="tooltip hover:cursor-pointer" data-tip="Html">
               <img
                 src="{{ asset('svg/logoHtml.svg') }}"
                 alt="html"
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
               />
             </div>
@@ -425,8 +472,8 @@
               <img
                 src="{{ asset('svg/logoHtml.svg') }}"
                 alt="html"
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
               />
             </div>
@@ -434,8 +481,8 @@
               <img
                 src="{{ asset('svg/logoHtml.svg') }}"
                 alt="html"
-                width="60"
-                height="60"
+                width="50"
+                height="50"
                 class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
               />
             </div>
@@ -443,8 +490,44 @@
               <img
                 src="{{ asset('svg/logoHtml.svg') }}"
                 alt="html"
-                width="60"
-                height="60"
+                width="50"
+                height="50"
+                class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
+              />
+            </div>
+            <div className="tooltip hover:cursor-pointer" data-tip="Html">
+              <img
+                src="{{ asset('svg/logoHtml.svg') }}"
+                alt="html"
+                width="50"
+                height="50"
+                class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
+              />
+            </div>
+            <div className="tooltip hover:cursor-pointer" data-tip="Html">
+              <img
+                src="{{ asset('svg/logoHtml.svg') }}"
+                alt="html"
+                width="50"
+                height="50"
+                class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
+              />
+            </div>
+            <div className="tooltip hover:cursor-pointer" data-tip="Html">
+              <img
+                src="{{ asset('svg/logoHtml.svg') }}"
+                alt="html"
+                width="50"
+                height="50"
+                class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
+              />
+            </div>
+            <div className="tooltip hover:cursor-pointer" data-tip="Html">
+              <img
+                src="{{ asset('svg/logoHtml.svg') }}"
+                alt="html"
+                width="50"
+                height="50"
                 class="mb-3 bg-slate-50 rounded-full p-2 shadow-slate-500 shadow-xl"
               />
             </div>
@@ -452,7 +535,11 @@
         </div>
       </div>
 
-      <div class="flex-none w-full max-w-full px-3 mt-6">
+      <!-- end bio % skills -->
+
+
+      <!-- projects -->
+      <div class="w-full max-w-full px-3 mt-6 lg:mx-10">
         <div
           class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
         >
@@ -598,6 +685,7 @@
           </div>
         </div>
       </div>
+      <!-- end project -->
     </div>
   </div>
 </div>
