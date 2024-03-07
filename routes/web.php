@@ -37,6 +37,10 @@ Route::get('/profile', function () {
     return view('profile.index');
 })->name('profile');
 
+Route::get('/detailevent', function () {
+    return view('event/detail.index');
+})->name('detailevent');
+
 // Main Routess
 
 
