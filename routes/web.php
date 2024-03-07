@@ -41,6 +41,10 @@ Route::get('/detailevent', function () {
     return view('event/detail.index');
 })->name('detailevent');
 
+Route::get('/detailjob', function () {
+    return view('job/detail.index');
+})->name('detailjob');
+
 // Main Routess
 
 
