@@ -34,9 +34,13 @@ class DatabaseSeeder extends Seeder
             'country' => 'Indonesia',
             'profile_images' => 'dian.png'
         ]);
-        // \App\Models\Explore::factory()->create([
-
-        // ]);
+        \App\Models\Explore::factory(3)->create([
+            "body" => fake()->text(25),
+            "like" => fake()->numberBetween(0,1000),
+            "dislike" => fake()->numberBetween(0,100),
+            "share" => mt_rand(1, 999),
+            "user_id" => fake()->randomElement([1,2]),
+        ]);
 
         // \App\Models\Platform::factory()->create([
         //     'platform_name' => 'Twitter',
