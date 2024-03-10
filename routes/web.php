@@ -36,6 +36,22 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [UserController::class, 'index'])->name('profile');
     Route::delete('/logout', [LoginController::class, 'destroy'])->name('login.destroy');
 });
+Route::get('/answer', function () {
+    return view('question/answer.index');
+})->name('answer');
+
+Route::get('/profile', function () {
+    return view('profile.index');
+})->name('profile');
+
+Route::get('/detailevent', function () {
+    return view('event/detail.index');
+})->name('detailevent');
+
+Route::get('/detailjob', function () {
+    return view('job/detail.index');
+})->name('detailjob');
+
 // Main Routess
 
 
