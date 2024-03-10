@@ -196,6 +196,8 @@
                         <span class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft">Job</span>
                     </a>
                 </li>
+                @auth
+                    
                 @if (request()->is('event'))
                     <hr
                         class="h-px mt-5 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent" />
@@ -293,6 +295,8 @@
                             </dialog>
                         </li>
                     @endif
+                @endauth
+
             </ul>
         </div>
     </aside>

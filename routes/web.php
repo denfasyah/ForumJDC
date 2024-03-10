@@ -36,7 +36,7 @@ Route::get('/answer', [Quest::class, 'answer'])->name('answer');
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [UserController::class, 'index'])->name('profile');
     Route::post('/explore', [Explore::class, 'create_explore']);
-    Route::delete('/logout', [LoginController::class, 'logout'])->name('login.logout');
+    Route::post('/logout', [LoginController::class, 'logout'])->name('login.logout');
 });
 // Main Routess
 
