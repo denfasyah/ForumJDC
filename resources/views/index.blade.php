@@ -906,7 +906,7 @@
             <!-- dark -->
             <label class="swap">
               <!-- this hidden checkbox controls the state -->
-              <input type="checkbox" class="theme-controller" value="black" />
+              <input type="checkbox" class="theme-controller" value="dark" />
 
               <!-- icon -->
               <span
