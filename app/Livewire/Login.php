@@ -27,7 +27,7 @@ class Login extends Component
             }
             
             // return dd('sukses log + verified email');
-            return redirect()->route('index');
+            return redirect('/');
         }
         // Gagal Log
         return dd(1);

@@ -74,6 +74,12 @@ class LoginController extends Controller
      */
     public function destroy(Login $login)
     {
-        //
+                
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        
+        Auth::logout();
+
+        return redirect('/');
     }
 }

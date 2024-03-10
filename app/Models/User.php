@@ -3,7 +3,7 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use App\Models\Platform;
+use App\Models\Explore;
 use App\Models\SocialMedia;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
@@ -25,7 +25,8 @@ class User extends Authenticatable
         'email',
         'password',
         'country',
-        'profile_images'
+        'profile_images',
+        'about'
     ];
 
     /**
@@ -50,5 +51,8 @@ class User extends Authenticatable
 
     public function socialMedia() {
         return $this->hasMany(SocialMedia::class);
+    }
+    public function explore() {
+        return $this->hasMany(Explore::class);
     }
 }

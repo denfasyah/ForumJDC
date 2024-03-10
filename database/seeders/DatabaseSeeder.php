@@ -17,38 +17,51 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         \App\Models\User::factory()->create([
-            'fullname' => 'Test User',
-            'username' => 'test',
-            'email' => 'test@example.com',
-            'password' => bcrypt('Kangyann57'),
+            'fullname' => 'Denfasyah',
+            'username' => 'denfasyah',
+            'about' => 'nothing',
+            'email' => 'denfasyah@junior.dev',
+            'password' => bcrypt('denfasyah123'),
             'country' => 'Indonesia',
-            'profile_images' => 'profile.png'
+            'profile_images' => 'denfasyah.png'
         ]);
+        \App\Models\User::factory()->create([
+            'fullname' => 'Dian ',
+            'username' => 'dian',
+            'about' => 'nothing',
+            'email' => 'dian@junior.dev',
+            'password' => bcrypt('dian123'),
+            'country' => 'Indonesia',
+            'profile_images' => 'dian.png'
+        ]);
+        // \App\Models\Explore::factory()->create([
 
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Twitter',
-            'images' => 'twitter.png',
-            'link' => 'https://twitter.com/'
-        ]);
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Facebook',
-            'images' => 'facebook.png',
-            'link' => 'https://facebook.com/'
-        ]);
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Discord',
-            'images' => 'Discord.png',
-            'link' => 'https://discord.com/'
-        ]);
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Tiktok',
-            'images' => 'tiktok.png',
-            'link' => 'https://tiktok.com/'
-        ]);
-        \App\Models\Platform::factory()->create([
-            'platform_name' => 'Instagram',
-            'images' => 'instagram.png',
-            'link' => 'https://instagram.com/'
-        ]);
+        // ]);
+
+        // \App\Models\Platform::factory()->create([
+        //     'platform_name' => 'Twitter',
+        //     'images' => 'twitter.png',
+        //     'link' => 'https://twitter.com/'
+        // ]);
+        // \App\Models\Platform::factory()->create([
+        //     'platform_name' => 'Facebook',
+        //     'images' => 'facebook.png',
+        //     'link' => 'https://facebook.com/'
+        // ]);
+        // \App\Models\Platform::factory()->create([
+        //     'platform_name' => 'Discord',
+        //     'images' => 'Discord.png',
+        //     'link' => 'https://discord.com/'
+        // ]);
+        // \App\Models\Platform::factory()->create([
+        //     'platform_name' => 'Tiktok',
+        //     'images' => 'tiktok.png',
+        //     'link' => 'https://tiktok.com/'
+        // ]);
+        // \App\Models\Platform::factory()->create([
+        //     'platform_name' => 'Instagram',
+        //     'images' => 'instagram.png',
+        //     'link' => 'https://instagram.com/'
+        // ]);
     }
 }

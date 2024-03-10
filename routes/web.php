@@ -22,13 +22,20 @@ use App\Http\Controllers\ExploreController as Explore;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [MainController::class,'index']);
+
+Route::get('/', [MainController::class, 'index']);
 Route::get('/event', [Event::class, 'index'])->name('event');
 Route::get('/explore', [Explore::class, 'index'])->name('explore');
 Route::get('/job', [Job::class, 'index'])->name('job');
 Route::get('/learning', [Learning::class, 'index'])->name('learn');
 Route::get('/learning/{type}', [Learning::class, 'single'])->name('learnWithType');
 Route::get('/quest', [Quest::class, 'index'])->name('quest');
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [UserController::class, 'index'])->name('profile');
+    Route::delete('/logout', [LoginController::class, 'destroy'])->name('login.destroy');
+});
 Route::get('/answer', function () {
     return view('question/answer.index');
 })->name('answer');
@@ -50,8 +57,10 @@ Route::get('/detailjob', function () {
 
 
 // Auth Routes
-Route::resource('/register', RegisterController::class)->only(['index', 'store']);
-Route::resource('/login', LoginController::class);
+Route::middleware(['guest'])->group(function () {
+    Route::resource('/register', RegisterController::class)->only(['index', 'store']);
+    Route::resource('/login', LoginController::class)->except('destroy');
+});
 
 
 Route::get('/user', [UserController::class, 'index'])->middleware('auth');
