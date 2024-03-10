@@ -258,7 +258,7 @@ whiteBtn.addEventListener("click", function () {
 
 if (navbar) {
   if (navbar.getAttribute("navbar-scroll") == "true") {
-    buttonNavbarFixed.setAttribute("checked", "true");
+    // buttonNavbarFixed.setAttribute("checked", "true");
   }
   buttonNavbarFixed.addEventListener("change", function () {
     if (this.checked) {
@@ -283,5 +283,5 @@ if (navbar) {
   });
 } else {
   // buttonNavbarFixed.setAttribute("checked", "true");
-  buttonNavbarFixed.setAttribute("disabled", "true");
+  // buttonNavbarFixed.setAttribute("disabled", "true");
 }

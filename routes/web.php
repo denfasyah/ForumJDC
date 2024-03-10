@@ -30,29 +30,19 @@ Route::get('/job', [Job::class, 'index'])->name('job');
 Route::get('/learning', [Learning::class, 'index'])->name('learn');
 Route::get('/learning/{type}', [Learning::class, 'single'])->name('learnWithType');
 Route::get('/quest', [Quest::class, 'index'])->name('quest');
+Route::get('/answer', [Quest::class, 'answer'])->name('answer');
 
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [UserController::class, 'index'])->name('profile');
-    Route::delete('/logout', [LoginController::class, 'destroy'])->name('login.destroy');
+    Route::post('/explore', [Explore::class, 'create_explore']);
+    Route::delete('/logout', [LoginController::class, 'logout'])->name('login.logout');
 });
-Route::get('/answer', function () {
-    return view('question/answer.index');
-})->name('answer');
-
-Route::get('/profile', function () {
-    return view('profile.index');
-})->name('profile');
-
-Route::get('/detailevent', function () {
-    return view('event/detail.index');
-})->name('detailevent');
+// Main Routess
 
 Route::get('/detailjob', function () {
     return view('job/detail.index');
 })->name('detailjob');
-
-// Main Routess
 
 
 
@@ -63,16 +53,16 @@ Route::middleware(['guest'])->group(function () {
 });
 
 
-Route::get('/user', [UserController::class, 'index'])->middleware('auth');
-Route::get('/user/profile', function () {
-    return view('user/profile');
-});
-Route::get('/user/bookmart', function () {
-    return view('user/bookmart');
-});
-Route::get('/user/create', function () {
-    return view('user/create/thread/createThreadPhoto');
-});
+// Route::get('/user', [UserController::class, 'index'])->middleware('auth');
+// Route::get('/user/profile', function () {
+//     return view('user/profile');
+// });
+// Route::get('/user/bookmart', function () {
+//     return view('user/bookmart');
+// });
+// Route::get('/user/create', function () {
+//     return view('user/create/thread/createThreadPhoto');
+// });
 
-// Component Routes
-Route::get('/sidebar', [ComponentController::class, 'sidebar']);
+// // Component Routes
+// Route::get('/sidebar', [ComponentController::class, 'sidebar']);

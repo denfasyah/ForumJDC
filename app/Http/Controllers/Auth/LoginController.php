@@ -72,7 +72,7 @@ class LoginController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Login $login)
+    public function logout(Login $login)
     {
                 
         request()->session()->invalidate();

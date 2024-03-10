@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('explores', function (Blueprint $table) {
             $table->id();
             $table->text('body');
-            $table->bigInteger('like');
-            $table->bigInteger('dislike');
-            $table->bigInteger('share');
+            $table->bigInteger('like')->default(0);
+            $table->bigInteger('dislike')->default(0);
+            $table->bigInteger('share')->default(0);
             $table->boolean('bookmark')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

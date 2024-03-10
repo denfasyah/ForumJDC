@@ -56,7 +56,7 @@
                         <div class="flex flex-col">
                             <span
                                 class="font-bold text-xs lg:text-lg md:text-lg sm:text-md mt-1">{{ $value->user['username'] }}</span>
-                            <span class="mb-2 text-xs lg:text-md md:text-md sm:text-md">09.00 AM</span>
+                            <span class="mb-2 text-xs lg:text-md md:text-md sm:text-md">{{ $value->created_at->DiffForHumans() }}</span>
                         </div>
                     </div>
                     <div class="flex items-start gap-3 -space-y-1">

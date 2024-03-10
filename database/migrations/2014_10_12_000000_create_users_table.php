@@ -15,12 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('username')->unique();
+            $table->unsignedBigInteger('role_id');
             $table->string('email')->unique();
             $table->string('country')->nullable();
             $table->text('profile_images')->nullable();
             $table->text('about')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });
