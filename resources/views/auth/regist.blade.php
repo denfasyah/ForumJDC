@@ -33,7 +33,7 @@
                 <p class="text-white mt-4 text-center text-xs">
                   Already have an account?
                   <a
-                    class="text-xs text-slate-900 font-semibold -200 hover:underline mt-4"
+                    class="text-xs text-white font-semibold -200 hover:underline mt-4"
                     href="/login"
                     >Login</a
                   >

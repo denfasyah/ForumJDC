@@ -1,8 +1,52 @@
 @extends('index')
 @section('explore')
     <div class="container mt-5">
+        <div class="flex flex-wrap mt-6 -mx-3">
+            <div class="w-full max-w-full px-3 lg:w-5/12 lg:flex-none">
+                <div
+                  class="shadow-soft-xl relative flex min-w-0 flex-col break-words rounded-2xl border-0 border-solid bg-white bg-clip-border p-4"
+                >
+                  <div class="relative overflow-hidden bg-cover rounded-xl">
+                    <div class="bg-white p-5 rounded-2xl relative">
+                      <h2
+                        class="text-md lg:text-xl md:text-xl text-md font-bold mb-4 flex items-center justify-center"
+                      >
+                        Create Explore
+                      </h2>
+                      <hr class="h-0.5 bg-slate-400" />
+                      <form role="form text-left">
+                        <div class="mb-4">
+                          <label for="" class="font-bold">Title</label>
+                          <input
+                            class="mt-2 text-sm w-full rounded-lg border border-solid border-gray-300 bg-white focus:outline-none py-2 px-3"
+                            type="text"
+                          />
+                        </div>
+                        <div class="mb-4">
+                          <label for="" class="font-bold">Photo</label>
+                          <input
+                            class="bg-Background mt-2 text-sm w-full rounded-lg border border-solid border-gray-300 py-2 px-3"
+                            type="file"
+                          />
+                        </div>
+                      </form>
+                      <div class="flex justify-end gap-2 mt-5">
+                        <button
+                          class="bg-Blue text-white rounded-xl lg:px-10 md:px-7 sm:px-5 px-4 py-1"
+                        >
+                          Create
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="w-full px-3 mt-5 lg:mt-0 mb-6 lg:mb-0 lg:w-7/12 lg:flex-none">
+                
         @foreach ($explore as $key => $value)
-            <div class="bg-white rounded-2xl p-5 my-3">
+        
+            <div class="bg-white rounded-2xl p-5 mb-3 shadow-soft-xl">
                 <div class="flex justify-between">
                     <div class="flex items-start -space-y-1 gap-3">
                         <div class="avatar flex items-center">
@@ -64,6 +108,10 @@
                 </div>
             </div>
         @endforeach
+
+    </div>
+    
+    </div>
     </div>
 @endsection
 @section('js-explore')
