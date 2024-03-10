@@ -10,7 +10,7 @@ class Explore extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['body', 'like', 'dislike', 'share', 'bookmark',];
+    protected $fillable = ['body','user_id'];
 
     public function user() {
         return $this->belongsTo(User::class);

@@ -9,7 +9,11 @@ class EventController extends Controller
     /**
      * Show the form for creating the resource.
      */
-    public function index(){
+    public function index()
+    {
+        if(request()->has('detailevent')) {
+            return view('event.detail.index');
+        }
         return view('event.index');
     }
     public function create(): never

@@ -28,7 +28,7 @@
         </p>
         <div class="flex items-center justify-end">
           <a
-            href="{{ route('detailevent') }}"
+            href="{{ route('event') }}?detailevent"
             type="button"
             class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-Blue text-Blue hover:border-Blue hover:bg-transparent hover:text-Blue hover:opacity-75 hover:shadow-none active:bg-fuchsia-500 active:text-white active:hover:bg-transparent active:hover:text-Blue"
           >
@@ -61,7 +61,7 @@
         </p>
         <div class="flex items-center justify-end">
           <a
-            href="{{ route('detailevent') }}"
+            href="{{ route('event') }}?detailevent""
             type="button"
             class="inline-block px-8 py-2 mb-0 font-bold text-center uppercase align-middle transition-all bg-transparent border border-solid rounded-lg shadow-none cursor-pointer leading-pro ease-soft-in text-xs hover:scale-102 active:shadow-soft-xs tracking-tight-soft border-Blue text-Blue hover:border-Blue hover:bg-transparent hover:text-Blue hover:opacity-75 hover:shadow-none active:bg-fuchsia-500 active:text-white active:hover:bg-transparent active:hover:text-Blue"
           >
