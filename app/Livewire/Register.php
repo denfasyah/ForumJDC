@@ -27,6 +27,8 @@ class Register extends Component
         $exceptValidate['password'] = bcrypt($exceptValidate['password']);
 
         User::create($exceptValidate);
+
+        return redirect()->route('explore');
     }
     public function render()
     {

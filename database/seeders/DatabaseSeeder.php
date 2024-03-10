@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'fullname' => 'Denfasyah',
             'username' => 'denfasyah',
+            'about' => 'nothing',
             'email' => 'denfasyah@junior.dev',
             'password' => bcrypt('denfasyah123'),
             'country' => 'Indonesia',
@@ -27,14 +28,15 @@ class DatabaseSeeder extends Seeder
         \App\Models\User::factory()->create([
             'fullname' => 'Dian ',
             'username' => 'dian',
+            'about' => 'nothing',
             'email' => 'dian@junior.dev',
             'password' => bcrypt('dian123'),
             'country' => 'Indonesia',
             'profile_images' => 'dian.png'
         ]);
-        \App\Models\Explore::factory()->create([
+        // \App\Models\Explore::factory()->create([
 
-        ]);
+        // ]);
 
         // \App\Models\Platform::factory()->create([
         //     'platform_name' => 'Twitter',
