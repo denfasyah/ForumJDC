@@ -17,7 +17,7 @@ return new class extends Migration
             $table->bigInteger('like');
             $table->bigInteger('dislike');
             $table->bigInteger('share');
-            $table->boolean('bookmark');
+            $table->boolean('bookmark')->nullable();
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
