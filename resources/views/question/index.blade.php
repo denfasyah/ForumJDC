@@ -1,6 +1,6 @@
 @extends('index') @section('quest')
 
-<div class="container">
+<div class="container mt-5">
   <div class="flex flex-wrap mt-6 -mx-3">
     <div class="w-full max-w-full px-3 lg:w-5/12 lg:flex-none">
       <div
