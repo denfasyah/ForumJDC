@@ -44,6 +44,10 @@ Route::get('/detailjob', function () {
     return view('job/detail.index');
 })->name('detailjob');
 
+Route::get('/detaillearn', function () {
+    return view('learning/detail.index');
+})->name('detaillearn');
+
 
 
 // Auth Routes
